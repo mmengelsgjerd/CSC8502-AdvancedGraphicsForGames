@@ -3,7 +3,8 @@
 
 Renderer::Renderer(Window &parent) : OGLRenderer(parent)
 {
-	triangle = Mesh::GenerateTriangle();
+	//triangle = Mesh::GenerateTriangle();
+	house = Mesh::GenerateHouse();
 	
 	currentShader = new Shader(SHADERDIR"basicVertex.glsl",
 							SHADERDIR"colourFragment.glsl");
@@ -15,7 +16,8 @@ Renderer::Renderer(Window &parent) : OGLRenderer(parent)
 
 Renderer::~Renderer(void)
 {
-	delete triangle;
+	delete house;
+	//delete triangle;
 }
 
 void Renderer::RenderScene()
@@ -24,7 +26,8 @@ void Renderer::RenderScene()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	glUseProgram(currentShader->GetProgram());
-	triangle->Draw();
+	house->Draw();
+	//triangle->Draw();
 	glUseProgram(0);
 
 	SwapBuffers();

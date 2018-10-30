@@ -11,4 +11,5 @@ public:
 
 protected:
 	Mesh* triangle;
+	Mesh* house;
 };

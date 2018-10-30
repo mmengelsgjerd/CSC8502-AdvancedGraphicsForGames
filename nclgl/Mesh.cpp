@@ -42,6 +42,69 @@ Mesh* Mesh::GenerateTriangle()
 	return m;
  }
 
+Mesh* Mesh::GenerateHouse()
+{
+	Mesh* m = new Mesh();
+	m->numVertices = 33;
+
+	m->vertices = new Vector3[m->numVertices];
+	//x, y, z
+	m->vertices[0] = Vector3(-0.5f, 0.5f, 0.0f);
+	m->vertices[1] = Vector3(-0.5f, -0.5f, 0.0f);
+	m->vertices[2] = Vector3(0.5f, -0.5f, 0.0f);
+	
+	m->vertices[3] = Vector3(0.5f, -0.5f, 0.0f);
+	m->vertices[4] = Vector3(0.5f, 0.5f, 0.0f);
+	m->vertices[5] = Vector3(-0.5f, 0.5f, 0.0f);
+	
+	m->vertices[6] = Vector3(-0.5f, 0.5f, 0.0f);
+	m->vertices[7] = Vector3(0.0f, 1.0f, 0.0f);
+	m->vertices[8] = Vector3(0.5f, 0.5f, 0.0f);
+	
+	m->vertices[9] = Vector3(0.3f, 0.50f, 0.0f);
+	m->vertices[10] = Vector3(0.3f, 0.9f, 0.0f);
+	m->vertices[11] = Vector3(0.35f, 0.9f, 0.0f);
+	
+	m->vertices[12] = Vector3(0.35f, 0.9f, 0.0f);
+	m->vertices[13] = Vector3(0.35f, 0.50f, 0.0f);
+	m->vertices[14] = Vector3(0.3f, 0.5f, 0.0f);
+
+	m->vertices[15] = Vector3(-0.3f, 0.0f, 0.0f);
+	m->vertices[16] = Vector3(-0.1f, 0.0f, 0.0f);
+	m->vertices[17] = Vector3(-0.3f, -0.5f, 0.0f);
+
+	m->vertices[18] = Vector3(-0.1f, 0.0f, 0.0f);
+	m->vertices[19] = Vector3(-0.1f, -0.5f, 0.0f);
+	m->vertices[20] = Vector3(-0.3f, -0.5f, 0.0f);
+
+	m->vertices[21] = Vector3(0.1f, -0.25f, 0.0f);
+	m->vertices[22] = Vector3(0.2f, -0.25f, 0.0f);
+	m->vertices[23] = Vector3(0.1f, 0.0f, 0.0f);
+	
+	m->vertices[24] = Vector3(0.2f, -0.25f, 0.0f);
+	m->vertices[25] = Vector3(0.2f, 0.0f, 0.0f);
+	m->vertices[26] = Vector3(0.1f, 0.0f, 0.0f);
+
+	m->vertices[27] = Vector3(0.25f, -0.25f, 0.0f);
+	m->vertices[28] = Vector3(0.35f, -0.25f, 0.0f);
+	m->vertices[29] = Vector3(0.25f, 0.0f, 0.0f);
+
+	m->vertices[30] = Vector3(0.35f, -0.25f, 0.0f);
+	m->vertices[31] = Vector3(0.35f, 0.0f, 0.0f);
+	m->vertices[32] = Vector3(0.25f, 0.0f, 0.0f);
+	
+	
+	m->colours = new Vector4[m->numVertices];
+	for (int i = 0; i < m->numVertices-18; i++)
+	{
+		m->colours[i] = Vector4(1.0f, 0.50f, 0.0f, 1.0f);
+	}
+
+
+	m->BufferData();
+	return m;
+}
+
 void Mesh::BufferData()
 {
 	glBindVertexArray(arrayObject);
