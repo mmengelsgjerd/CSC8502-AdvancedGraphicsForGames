@@ -55,6 +55,6 @@ static inline double DegToRad(const double rad)	{
 #define min(a,b)    (((a) < (b)) ? (a) : (b))
 
 #define SHADERDIR	"../../Shaders/"
-#define MESHDIR		"../../Meshes/"
-#define TEXTUREDIR  "../../Textures/"
+#define MESHDIR		"../../Assets/Meshes/"
+#define TEXTUREDIR  "../../Assets/Textures/"
 #define SOUNDSDIR	"../../Sounds/"
