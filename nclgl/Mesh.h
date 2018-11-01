@@ -18,6 +18,9 @@ public:
 	void SetTexture(GLuint tex) { texture = tex; }
 	GLuint GetTexture() { return texture; }
 
+	//Tutorial 4
+	static Mesh* GenerateQuad();
+
 protected:
 	void BufferData();
 
