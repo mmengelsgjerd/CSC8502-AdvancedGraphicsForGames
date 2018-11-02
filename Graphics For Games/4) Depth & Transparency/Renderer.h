@@ -10,24 +10,14 @@ public:
 	virtual ~Renderer(void);
 
 	virtual void RenderScene();
-
-	void ToggleObject();
-	void ToggleDepth();
-	void ToggleAlphaBlend();
-	void ToggleBlendMode();
-	void MoveObject(float by);
+	
+	void ToggleScissor();
+	void ToggleStencil();
 
 protected:
-	Mesh* meshes[2];
-	Vector3 positions[2];
+	Mesh* triangle;
+	Mesh* quad;
 
-	Matrix4 textureMatrix;
-	Matrix4 modelMatrix;
-	Matrix4 projMatrix;
-	Matrix4 viewMatrix;
-
-	bool modifyObject;
-	bool usingDepth;
-	bool usingAlpha;
-	int blendMode;
+	bool usingScissor;
+	bool usingStencil;
 };
