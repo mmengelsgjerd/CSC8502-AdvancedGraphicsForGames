@@ -5,8 +5,8 @@ Renderer2::Renderer2(Window &parent) : OGLRenderer(parent)
 	triangle = Mesh::GenerateQuad();
 	quad = Mesh::GenerateTriangle();
 
-	currentShader = new Shader(SHADERDIR"TexturedVertex.glsl",
-		SHADERDIR"StencilFragment.glsl");
+	currentShader = new Shader(	SHADERDIR"TexturedVertex.glsl",
+								SHADERDIR"StencilFragment.glsl");
 
 	if (!currentShader->LinkProgram()) return;
 
