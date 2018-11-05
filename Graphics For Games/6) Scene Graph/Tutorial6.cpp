@@ -20,6 +20,10 @@ int main() {
 	while(w.UpdateWindow() && !Window::GetKeyboard()->KeyDown(KEYBOARD_ESCAPE)){
 		renderer.UpdateScene(w.GetTimer()->GetTimedMS());
 		renderer.RenderScene();
+
+		if (Window::GetKeyboard()->KeyTriggered(KEYBOARD_RETURN)) {
+			renderer.root->RemoveChild();
+		}
 	}
 
 	return 0;

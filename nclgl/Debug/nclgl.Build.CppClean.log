@@ -1,25 +1,25 @@
-d:\csc8502 2018\nclgl\debug\nclgl.pdb
-d:\csc8502 2018\nclgl\debug\nclgl.idb
-d:\csc8502 2018\nclgl\debug\gametimer.obj
-d:\csc8502 2018\nclgl\debug\keyboard.obj
-d:\csc8502 2018\nclgl\debug\matrix4.obj
-d:\csc8502 2018\nclgl\debug\md5anim.obj
-d:\csc8502 2018\nclgl\debug\md5filedata.obj
-d:\csc8502 2018\nclgl\debug\md5mesh.obj
-d:\csc8502 2018\nclgl\debug\md5node.obj
-d:\csc8502 2018\nclgl\debug\mouse.obj
-d:\csc8502 2018\nclgl\debug\quaternion.obj
-d:\csc8502 2018\nclgl\debug\camera.obj
-d:\csc8502 2018\nclgl\debug\mesh.obj
-d:\csc8502 2018\nclgl\debug\objmesh.obj
-d:\csc8502 2018\nclgl\debug\oglrenderer.obj
-d:\csc8502 2018\nclgl\debug\shader.obj
-d:\csc8502 2018\nclgl\debug\window.obj
-d:\csc8502 2018\graphics for games\debug\nclgl.lib
-d:\csc8502 2018\graphics for games\debug\nclgl.pdb
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\cl.command.1.tlog
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\cl.read.1.tlog
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\cl.write.1.tlog
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\lib-link.read.1.tlog
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\lib-link.write.1.tlog
-d:\csc8502 2018\nclgl\debug\nclgl.tlog\lib.command.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.pdb
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.idb
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\window.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\shader.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\quaternion.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\oglrenderer.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\objmesh.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\mouse.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\mesh.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\md5node.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\md5mesh.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\md5filedata.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\md5anim.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\matrix4.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\keyboard.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\gametimer.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\camera.obj
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\graphics for games\debug\nclgl.lib
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\graphics for games\debug\nclgl.pdb
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\cl.command.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\cl.read.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\cl.write.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\lib-link.read.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\lib-link.write.1.tlog
+c:\users\b7067634\projects\csc8502-advancedgraphicsforgames\nclgl\debug\nclgl.tlog\lib.command.1.tlog
