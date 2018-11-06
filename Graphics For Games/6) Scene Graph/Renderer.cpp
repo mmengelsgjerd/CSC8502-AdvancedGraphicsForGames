@@ -26,7 +26,8 @@ Renderer::Renderer(Window & parent) : OGLRenderer(parent) {
 Renderer ::~Renderer(void) {
 	delete root;
 	CubeRobot::DeleteCube(); // Also important !
-}
+}
+
 void Renderer::UpdateScene(float msec) {
 	camera->UpdateCamera(msec);
 	viewMatrix = camera->BuildViewMatrix();
@@ -44,7 +45,9 @@ void Renderer::RenderScene() {
 	DrawNode(root);
 	
 	glUseProgram(0);
-	SwapBuffers();}
+	SwapBuffers();
+}
+
 void Renderer::DrawNode(SceneNode* n) {
 	if (n->GetMesh()) {
 		Matrix4 transform = n->GetWorldTransform() * Matrix4::Scale(n->GetModelScale());
@@ -55,4 +58,6 @@ void Renderer::DrawNode(SceneNode* n) {
 	}
 	for (vector <SceneNode*>::const_iterator i = n->GetChildIteratorStart(); i != n->GetChildIteratorEnd(); ++i) {
 		DrawNode(*i);
-	}}
+	}
+}
+

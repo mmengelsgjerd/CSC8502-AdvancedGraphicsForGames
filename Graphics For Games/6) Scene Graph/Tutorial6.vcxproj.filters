@@ -3,12 +3,10 @@
   <ItemGroup>
     <ClCompile Include="Tutorial6.cpp" />
     <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="CubeRobot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="SceneNode.h" />
     <ClInclude Include="CubeRobot.h" />
   </ItemGroup>
 </Project>

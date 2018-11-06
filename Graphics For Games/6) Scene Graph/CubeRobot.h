@@ -1,5 +1,5 @@
 # pragma once
-#include "SceneNode.h"
+#include "../../nclgl/SceneNode.h"
 #include "../../nclgl/OBJMesh.h"
 
 class CubeRobot : public SceneNode {
@@ -24,4 +24,8 @@ protected:
 	SceneNode* leftHip;
 
 	SceneNode * leftArm;
-	SceneNode * rightArm;		int counter = 0;};
+	SceneNode * rightArm;	
+
+	int counter = 0;
+};
+

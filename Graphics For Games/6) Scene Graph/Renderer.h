@@ -2,7 +2,7 @@
 
 #include "../../nclgl/OGLRenderer.h"
 #include "../../nclgl/Camera.h"
-#include "SceneNode.h"
+#include "../../nclgl/SceneNode.h"
 #include "CubeRobot.h"
 
 class Renderer : public OGLRenderer {
@@ -18,4 +18,6 @@ class Renderer : public OGLRenderer {
  protected:
 	void DrawNode(SceneNode * n);
 	
-	Camera * camera;	};
+	Camera * camera;	
+};
+
