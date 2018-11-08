@@ -384,7 +384,7 @@ void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 
 		//We'll set its position and orientation to the transformed baseframe variables
 
-		skelJoint.position		= animPos;
+		skelJoint.position = animPos;
 		skelJoint.orientation	= animQuat;	
 
 		//Now to set the local transform of the current joint. We start by turning the orientation
@@ -397,7 +397,7 @@ void	MD5Anim::TransformSkeleton(MD5Skeleton &skel, unsigned int frameNum) {
 		//If the joint has no parent (determined by a negative parent variable) we need to 
 		//transform the joint's transform to the correct rotation, using the conversion matrix
 		if(skelJoint.parent < 0) {	//Base Joint, so we're done
-			skelJoint.transform = MD5FileData::conversionMatrix * skelJoint.localTransform;
+			skelJoint.transform = (MD5FileData::conversionMatrix * skelJoint.localTransform);
 		}
 		else{	
 			//If this joint /does/ have a parent, we transform the joint's transform by its

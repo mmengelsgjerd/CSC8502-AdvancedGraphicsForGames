@@ -4,7 +4,7 @@ Renderer::Renderer(Window &parent) : OGLRenderer(parent)	{
 	camera			= new Camera(0,-90.0f,Vector3(-180,60,0));
 
 #ifdef MD5_USE_HARDWARE_SKINNING
-	currentShader   = new Shader("skeletonvertex.glsl", SHADERDIR"TexturedFragment.glsl");
+	currentShader   = new Shader(SHADERDIR"skeletonVertexSimple.glsl", SHADERDIR"TexturedFragment.glsl");
 #else
 	currentShader   = new Shader(SHADERDIR"TexturedVertex.glsl", SHADERDIR"TexturedFragment.glsl");
 #endif
@@ -17,8 +17,12 @@ Renderer::Renderer(Window &parent) : OGLRenderer(parent)	{
 		return;
 	}
 
-	hellData->AddAnim(MESHDIR"idle2.md5anim");
-	hellNode->PlayAnim(MESHDIR"idle2.md5anim");
+	hellData->AddAnim(MESHDIR"walk7.md5anim");
+	hellData->AddAnim(MESHDIR"attack2.md5anim");
+
+	hellNode->PlayAnim(MESHDIR"walk7.md5anim");
+	//hellNode->PlayAnim(MESHDIR"attack2.md5anim");
+
 
 	projMatrix = Matrix4::Perspective(1.0f,10000.0f,(float)width / (float)height, 45.0f);
 
@@ -38,7 +42,16 @@ Renderer::~Renderer(void)	{
  void Renderer::UpdateScene(float msec)	{
 	camera->UpdateCamera(msec); 
 	viewMatrix		= camera->BuildViewMatrix();
-
+	if (counter == 120)
+	{
+		hellNode->PlayAnim(MESHDIR"attack2.md5anim");
+	}
+	if (counter == 168)
+	{
+		hellNode->PlayAnim(MESHDIR"walk7.md5anim");
+		counter = 0;
+	}
+	counter += 1;
 	hellNode->Update(msec);
 }
 
@@ -48,12 +61,13 @@ void Renderer::RenderScene()	{
 	glUseProgram(currentShader->GetProgram());
 	glUniform1i(glGetUniformLocation(currentShader->GetProgram(), "diffuseTex"), 0);
 
-	UpdateShaderMatrices();
 
+	
 	for(int y = 0; y < 10; ++y) {
 		for(int x = 0; x < 10; ++x) {
-			modelMatrix = Matrix4::Translation(Vector3(x * 100, 0, y * 100));
-			UpdateShaderMatrices();	
+			modelMatrix = Matrix4::Translation(Vector3(x * 100.0f, 0.0f, y * 100.0f));
+			modelMatrix.SetPositionVector(modelMatrix.GetPositionVector() + hellNode->GetTransform().GetPositionVector()); //+ 
+			UpdateShaderMatrices();
 			hellNode->Draw(*this);
 		}
 	}

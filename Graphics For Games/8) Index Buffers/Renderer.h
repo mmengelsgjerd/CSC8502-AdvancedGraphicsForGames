@@ -14,4 +14,5 @@ class Renderer : public OGLRenderer {
 
  protected:
 	HeightMap * heightMap;
-	Camera * camera;};
+	Camera * camera;
+};

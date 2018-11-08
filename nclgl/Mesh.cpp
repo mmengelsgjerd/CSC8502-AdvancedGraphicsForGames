@@ -159,7 +159,9 @@ void Mesh::BufferData()
 	if (indices) {
 		glGenBuffers(1, &bufferObject[INDEX_BUFFER]);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufferObject[INDEX_BUFFER]);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, numIndices * sizeof(GLuint), indices, GL_STATIC_DRAW);	}
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, numIndices * sizeof(GLuint), indices, GL_STATIC_DRAW);
+	}
+
 
 
 	glBindVertexArray(0);
@@ -168,6 +170,8 @@ void Mesh::BufferData()
 
 void Mesh::Draw()
 {
+	//Tutorial 9
+	glActiveTexture(GL_TEXTURE0);
 	//Tutorial 3
 	glBindTexture(GL_TEXTURE_2D, texture);
 

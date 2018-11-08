@@ -1,6 +1,2 @@
-﻿  HeightMap.cpp
-MD5Node.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-MD5Mesh.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-MD5FileData.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-MD5Anim.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+﻿  MD5Node.cpp
   nclgl.vcxproj -> C:\Users\b7067634\Projects\CSC8502-AdvancedGraphicsForGames\Graphics For Games\Debug\nclgl.lib

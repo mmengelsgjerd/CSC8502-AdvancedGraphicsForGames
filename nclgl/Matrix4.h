@@ -106,6 +106,16 @@ public:
 		return vec;
 	};
 
+	inline friend Matrix4 operator+(const Matrix4 &lhs, const Matrix4 &rhs)  {
+		Matrix4 out;
+		//Students! You should be able to think up a really easy way of speeding this up...
+		for (unsigned int r = 0; r < 16; ++r) {
+			out.values[r] = lhs.values[r] + rhs.values[r];
+		}
+		return out;
+
+	};
+
 		inline Vector4 operator*(const Vector4 &v) const {
 		return Vector4(
 			v.x*values[0] + v.y*values[4] + v.z*values[8]  +v.w * values[12],
