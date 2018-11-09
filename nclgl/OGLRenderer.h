@@ -34,6 +34,7 @@ _-_-_-_-_-_-_-""  ""
 
 #include "Shader.h"		//Students make this file...
 #include "Mesh.h"		//And this one...
+#include "Light.h"
 
 using std::vector;
 
@@ -120,7 +121,7 @@ protected:
 
 	void			SetTextureRepeating(GLuint target, bool state);
 
-	//void			SetShaderLight(const Light &l);
+	void			SetShaderLight(const Light &l); //Tutorial 11
 
 	void			DrawDebugPerspective(Matrix4*matrix = 0);
 	void			DrawDebugOrtho(Matrix4*matrix = 0);

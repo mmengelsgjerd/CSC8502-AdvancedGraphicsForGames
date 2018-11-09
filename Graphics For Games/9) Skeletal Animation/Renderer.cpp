@@ -41,14 +41,14 @@ Renderer::~Renderer(void)	{
 
  void Renderer::UpdateScene(float msec)	{
 	camera->UpdateCamera(msec); 
-	viewMatrix		= camera->BuildViewMatrix();
+	viewMatrix = camera->BuildViewMatrix();
 	if (counter == 120)
 	{
-		hellNode->PlayAnim(MESHDIR"attack2.md5anim");
+		//hellNode->PlayAnim(MESHDIR"attack2.md5anim");
 	}
 	if (counter == 168)
 	{
-		hellNode->PlayAnim(MESHDIR"walk7.md5anim");
+		//hellNode->PlayAnim(MESHDIR"walk7.md5anim");
 		counter = 0;
 	}
 	counter += 1;
@@ -66,7 +66,7 @@ void Renderer::RenderScene()	{
 	for(int y = 0; y < 10; ++y) {
 		for(int x = 0; x < 10; ++x) {
 			modelMatrix = Matrix4::Translation(Vector3(x * 100.0f, 0.0f, y * 100.0f));
-			modelMatrix.SetPositionVector(modelMatrix.GetPositionVector() + hellNode->GetTransform().GetPositionVector()); //+ 
+			modelMatrix.SetPositionVector(modelMatrix.GetPositionVector() + hellNode->GetTransform().GetPositionVector()); 
 			UpdateShaderMatrices();
 			hellNode->Draw(*this);
 		}
