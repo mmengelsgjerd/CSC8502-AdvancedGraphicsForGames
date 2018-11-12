@@ -57,5 +57,6 @@ protected:
 							const Vector2 & tb, const Vector2 & tc);
 	
 	Vector3 * tangents;
-	GLuint bumpTexture;
+	GLuint bumpTexture;
+
 };

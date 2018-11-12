@@ -24,17 +24,17 @@ void Camera::UpdateCamera(float msec)	{
 	msec *= 5.0f;
 
 	if(Window::GetKeyboard()->KeyDown(KEYBOARD_W)) {
-		position += Matrix4::Rotation(yaw, Vector3(0,0.5f,0)) * Vector3(0,0,-1) * msec;
+		position += Matrix4::Rotation(yaw, Vector3(0, 1.0f, 0)) * Vector3(0, 0, -1) * (msec / 10);
 	}
 	if(Window::GetKeyboard()->KeyDown(KEYBOARD_S)) {
-		position -= Matrix4::Rotation(yaw, Vector3(0,0.5f,0)) * Vector3(0,0,-1) * msec;
+		position -= Matrix4::Rotation(yaw, Vector3(0, 1.0f, 0)) * Vector3(0, 0, -1) * (msec / 10);
 	}
 
 	if(Window::GetKeyboard()->KeyDown(KEYBOARD_A)) {
-		position += Matrix4::Rotation(yaw, Vector3(0,0.5f,0)) * Vector3(-1,0,0) * msec;
+		position += Matrix4::Rotation(yaw, Vector3(0, 1.0f, 0)) * Vector3(-1, 0, 0) *  (msec / 10);
 	}
 	if(Window::GetKeyboard()->KeyDown(KEYBOARD_D)) {
-		position -= Matrix4::Rotation(yaw, Vector3(0,0.5f,0)) * Vector3(-1,0,0) * msec;
+		position -= Matrix4::Rotation(yaw, Vector3(0, 1.0f, 0)) * Vector3(-1, 0, 0) *  (msec / 10);
 	}
 
 	if(Window::GetKeyboard()->KeyDown(KEYBOARD_SHIFT)) {

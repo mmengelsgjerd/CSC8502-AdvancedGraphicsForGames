@@ -339,7 +339,11 @@ void Mesh::GenerateTangents() {
 	for (GLuint i = 0; i < numVertices; ++i) {
 		tangents[i].Normalise();
 	}
-	}Vector3 Mesh::GenerateTangent(	const Vector3 &a, const Vector3 &b,
+	
+}
+
+
+Vector3 Mesh::GenerateTangent(	const Vector3 &a, const Vector3 &b,
 								const Vector3 &c, const Vector2 & ta,
 								const Vector2 & tb, const Vector2 & tc) {
 	Vector2 coord1 = tb - ta;
@@ -353,4 +357,5 @@ void Mesh::GenerateTangents() {
 	float factor = 1.0f / (coord1.x * coord2.y - coord2.x * coord1.y);
 	
 	return axis * factor;
-	}
+	
+}
