@@ -17,4 +17,5 @@ class Renderer : public OGLRenderer {
 	Mesh * heightMap;
 	Camera * camera;
 	Light * light;
-	};
+	
+};

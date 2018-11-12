@@ -25,4 +25,5 @@ class Light {
  protected:
 	Vector3 position;
 	Vector4 colour;
-	float radius;};
+	float radius;
+};

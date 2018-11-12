@@ -3,7 +3,8 @@
 
 enum MeshBuffer {
 	VERTEX_BUFFER, COLOUR_BUFFER, TEXTURE_BUFFER,
-	NORMAL_BUFFER, INDEX_BUFFER, MAX_BUFFER
+	NORMAL_BUFFER, TANGENT_BUFFER, INDEX_BUFFER,
+	MAX_BUFFER
 };
 
 class Mesh {
@@ -21,6 +22,10 @@ public:
 
 	//Tutorial 4
 	static Mesh* GenerateQuad();
+
+	//Tutorial 12
+	void SetBumpMap(GLuint tex) { bumpTexture = tex; }
+	GLuint GetBumpMap() { return bumpTexture; }
 
 protected:
 	void BufferData();
@@ -44,4 +49,13 @@ protected:
 	//Tutorial 11
 	void GenerateNormals();
 	Vector3* normals;
+
+	//Tutorial 12
+	void GenerateTangents();
+	Vector3 GenerateTangent(const Vector3 &a, const Vector3 &b,
+							const Vector3 &c, const Vector2 & ta,
+							const Vector2 & tb, const Vector2 & tc);
+	
+	Vector3 * tangents;
+	GLuint bumpTexture;
 };
